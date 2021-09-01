@@ -1,0 +1,28 @@
+backend:
+    name: git-gateway
+    branch: master
+publish_mode: editorial_workflow
+site_url: https://markerjavec.com
+display_url: https://markerjavec.com
+logo_url: /assets/img/logo-black.png
+show_preview_links: false
+media_folder: "assets/uploads"
+collections:
+    - name: "blog"
+      label: "Blog"
+      folder: "_posts/"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+          preview: false
+      fields:
+          - {
+                label: "Layout",
+                name: "layout",
+                widget: "hidden",
+                default: "blog",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Image", name: "img", widget: "image", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
