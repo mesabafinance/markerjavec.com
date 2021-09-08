@@ -1,9 +1,11 @@
 ---
-layout: blog
+layout: base
 permalink: /blog/index.html
 id: blog
 published: true
 ---
+{% include background.html %}
+
 {% assign home = site.data.general.items %}
 <div class="section" id="home">
     <img src="{{home.circle |relative_url}}?{{cache_buster}}" class="rounded-circle circle-image"
@@ -23,4 +25,5 @@ published: true
         </a>
     </div>
     {% endfor %}
+    <p class="mt-5"><a href="/" class="btn blog-btn">Back to Main Page</a></p>
 </div>
