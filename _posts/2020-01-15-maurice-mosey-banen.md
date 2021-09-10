@@ -1,5 +1,6 @@
 ---
 title: Maurice "Mosey" Banen
+date: 2021-09-10T18:49:35.976Z
 ---
 
 This short story is one in a series of 20 blog postings / short anecdotes related to a small finance company I acquired June 10, 1994 after having graduated from High School on June 7th of 1994 and the people and experiences I encountered along this journey.
