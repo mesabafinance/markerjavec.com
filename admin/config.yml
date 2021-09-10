@@ -1,7 +1,6 @@
 backend:
     name: git-gateway
     branch: blog
-publish_mode: editorial_workflow
 site_url: https://markerjavec.com
 display_url: https://markerjavec.com
 logo_url: /assets/img/logo-black.png
