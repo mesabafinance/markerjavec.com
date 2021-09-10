@@ -4,40 +4,86 @@
     <div class="container py-5 text-center">
         <p>
             {% for i in site.data.general.items.socialmedia %}
-                <a href="{{i.url}}" rel="noopener" class="mr-4"><img src="{{i.img}}" class="sm-icon" alt="Agro Fund One {{i.name}}"></a>
+            <a href="{{i.url}}" rel="noopener" class="mr-4">
+                <img
+                    src="{{i.img}}"
+                    class="sm-icon"
+                    alt="Agro Fund One {{i.name}}"
+                />
+            </a>
             {% endfor %}
         </p>
         <p class="d-none d-sm-block mt-5">
-            {% for i in site.data.portfolio.items.items %}
-                {% unless forloop.first %}
-                    |
-                {% endunless %}
-                <a class="px-1" href="http://{{i.url}}" rel="noopener">{{i.url}}</a>
+            {% for i in site.data.portfolio.items.items %} {% unless
+            forloop.first %} | {% endunless %}
+            <a class="px-1" href="http://{{i.url}}" rel="noopener">{{i.url}}</a>
             {% endfor %}
         </p>
         <div class="d-sm-none">
             {% for i in site.data.portfolio.items.items %}
-                <p>
-                    <a class="px-1" href="http://{{i.url}}" rel="noopener">{{i.url}}</a>
-                </p>
+            <p>
+                <a class="px-1" href="http://{{i.url}}" rel="noopener">
+                    {{i.url}}
+                </a>
+            </p>
             {% endfor %}
         </div>
-        <p class="mt-4">Copyright &copy; Mark M. Erjavec
+        <p class="mt-4">
+            Copyright &copy; Mark M. Erjavec
             <span id="currentYear"></span>
         </p>
         <p class="mt-4">{% include privacy.html %}</p>
-        <p class="mt-5 small text-muted">Icons made by
-            <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a>,
-            <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a>,
-            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+        <p class="mt-5 small text-muted">
+            Icons made by
+            <a
+                href="https://www.flaticon.com/authors/good-ware"
+                title="Good Ware"
+            >
+                Good Ware
+            </a>
+            ,
+            <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">
+                turkkub
+            </a>
+            ,
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+                Freepik
+            </a>
             from
             <a href="https://www.flaticon.com/" title="Flaticon">
-                www.flaticon.com</a>
+                www.flaticon.com
+            </a>
         </p>
     </div>
 </div>
 
+{% if page.id == "index" %}
+<script>
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+            if (user) {
+                window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                });
+            }
+        });
+    }
+</script>
+{% endif %}
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="{{'/assets/js/bootstrap.min.js' | relative_url}}?{{cache_buster}}" async></script>
-<script type="text/javascript" src="{{'/assets/js/ekko-lightbox.min.js' | relative_url}}?{{cache_buster}}" async></script>
-<script type="text/javascript" src="{{'/assets/js/main.js' | relative_url}}?{{cache_buster}}" async></script>
+<script
+    type="text/javascript"
+    src="{{'/assets/js/bootstrap.min.js' | relative_url}}?{{cache_buster}}"
+    async
+></script>
+<script
+    type="text/javascript"
+    src="{{'/assets/js/ekko-lightbox.min.js' | relative_url}}?{{cache_buster}}"
+    async
+></script>
+<script
+    type="text/javascript"
+    src="{{'/assets/js/main.js' | relative_url}}?{{cache_buster}}"
+    async
+></script>
