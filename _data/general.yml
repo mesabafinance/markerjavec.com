@@ -15,12 +15,12 @@ items:
         - text: Skill 6
           icon: /assets/img/skills/plant.png
     boilerplate: >-
-        For 25 years, I have developed unique skills to observe, interpret, and execute decisive strategies in finance. My expertise has resulted in over 1,000 transactions facilitated in a diverse range of countries, across many asset types, and targeted end-user markets on several continents.
+        For 30 years, I have developed unique skills to observe, interpret, and execute decisive strategies in finance. My expertise has resulted in over 1,000 transactions facilitated in a diverse range of countries, across many asset types, and targeted end-user markets on several continents.
     button: More about Mark
     circle: /assets/img/mark-erjavec-circle.jpg
     facts:
         - text: in the finance and investment banking business
-          counter: 25 years
+          counter: 30 years
           background: /assets/img/facts/bank.png
         - text: investment capital raised on behalf of third parties
           counter: 500mm
